@@ -1,0 +1,31 @@
+{
+  "mode": "standalone",
+  "watchRoots": [
+    {
+      "id": "sample-workspace",
+      "label": "サンプル作業領域",
+      "path": "./data/sample-workspace",
+      "binaryGlobs": ["**/*.xlsx", "**/*.xlsm", "**/*.mb", "**/*.ma", "**/*.blend"],
+      "ignore": ["**/node_modules/**", "**/.git/**", "**/~$*"],
+      "structure": {
+        "requireDirs": [],
+        "namingRules": [],
+        "forbidGlobs": ["**/*.tmp", "**/Thumbs.db"]
+      }
+    }
+  ],
+  "riskRules": [
+    { "id": "mass-delete", "kind": "count", "event": "delete", "windowSec": 60, "threshold": 20, "severity": "high" },
+    { "id": "mass-rename", "kind": "count", "event": "rename", "windowSec": 60, "threshold": 20, "severity": "medium" },
+    { "id": "secret-leak", "kind": "content", "match": "(api[_-]?key|secret|password|-----BEGIN [A-Z ]+PRIVATE KEY-----)", "on": "add", "severity": "high" },
+    { "id": "out-of-scope", "kind": "path", "match": "outsideWatchRoot", "severity": "medium" }
+  ],
+  "claim": {
+    "staleAfterSec": 1800,
+    "snapshotMaxBytes": 52428800
+  },
+  "server": {
+    "port": 17340,
+    "host": "127.0.0.1"
+  }
+}

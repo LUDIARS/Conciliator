@@ -1,0 +1,23 @@
+{
+  "_comment": "mode=agent の設定例。各ユーザの PC で動かす。CONCILIATOR_CONFIG 環境変数でこのファイルを指す。",
+  "mode": "agent",
+  "watchRoots": [
+    {
+      "id": "my-local-work",
+      "label": "ローカル作業フォルダ",
+      "path": "C:/Users/me/Documents/work",
+      "binaryGlobs": ["**/*.xlsx", "**/*.xlsm", "**/*.mb", "**/*.ma", "**/*.blend"],
+      "ignore": ["**/node_modules/**", "**/.git/**", "**/~$*"],
+      "structure": { "requireDirs": [], "namingRules": [], "forbidGlobs": [] }
+    }
+  ],
+  "cernere": {
+    "baseUrl": "http://localhost:8080",
+    "projectId": "<conciliator-project-id>",
+    "hmacSecretEnv": "CONCILIATOR_CERNERE_HMAC"
+  },
+  "agent": {
+    "serverUrl": "ws://conciliator-server.tailnet:17340",
+    "accessTokenEnv": "CONCILIATOR_CERNERE_TOKEN"
+  }
+}

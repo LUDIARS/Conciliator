@@ -1,0 +1,8 @@
+node_modules/
+dist/
+data/conciliator.db
+data/conciliator.db-shm
+data/conciliator.db-wal
+data/snapshots/
+*.log
+.DS_Store

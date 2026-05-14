@@ -1,0 +1,28 @@
+{
+  "_comment": "mode=server の設定例。中央コーディネータ。遠隔 agent の接続を受ける。",
+  "mode": "server",
+  "watchRoots": [
+    {
+      "id": "central-shared",
+      "label": "中央共有フォルダ",
+      "path": "Z:/shared",
+      "binaryGlobs": ["**/*.xlsx", "**/*.xlsm", "**/*.ma"],
+      "ignore": ["**/node_modules/**", "**/.git/**", "**/~$*"],
+      "structure": { "requireDirs": [], "namingRules": [], "forbidGlobs": [] }
+    }
+  ],
+  "riskRules": [
+    { "id": "mass-delete", "kind": "count", "event": "delete", "windowSec": 60, "threshold": 20, "severity": "high" }
+  ],
+  "server": { "port": 17340, "host": "127.0.0.1" },
+  "cernere": {
+    "baseUrl": "http://localhost:8080",
+    "projectId": "<conciliator-project-id>",
+    "hmacSecretEnv": "CONCILIATOR_CERNERE_HMAC"
+  },
+  "concordia": {
+    "baseUrl": "http://127.0.0.1:17330",
+    "channel": "system",
+    "authorLabel": "Conciliator"
+  }
+}
