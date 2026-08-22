@@ -1,0 +1,14 @@
+{
+  "name": "http-api",
+  "description": "HTTP の受口とサーバ。 ルート登録と起動。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/api/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/server/(?:.*/)?[^/]+$"
+    }
+  ]
+}

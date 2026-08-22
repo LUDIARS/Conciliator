@@ -1,0 +1,11 @@
+{
+  "name": "merge-mediation",
+  "description": "衝突の調停。 マージ方針の提示と合意の取りまとめ。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/merge/(?:.*/)?[^/]+$"
+    }
+  ]
+}

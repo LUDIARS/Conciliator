@@ -1,0 +1,29 @@
+{
+  "name": "service-runtime",
+  "description": "プロセスとしての Conciliator。 起動と配線、 定期処理、 共有ユーティリティ、 自動テスト。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/config/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/agent/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/shared/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)tests?/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)web/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)public/(?:.*/)?[^/]+$"
+    }
+  ]
+}

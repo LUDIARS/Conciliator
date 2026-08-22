@@ -1,0 +1,20 @@
+{
+  "name": "claim-collision",
+  "description": "作業の宣言と衝突検知。 claim の受付と、 重なりの判定。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/claims/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/collision/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/risk/(?:.*/)?[^/]+$"
+    },
+    {
+      "pathPattern": "(^|/)src/watcher/(?:.*/)?[^/]+$"
+    }
+  ]
+}

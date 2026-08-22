@@ -1,0 +1,11 @@
+{
+  "name": "dev-tools",
+  "description": "開発補助ツール。 動作確認や生成の補助で、 サービス本体の責務は持たない。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)tools/(?:.*/)?[^/]+$"
+    }
+  ]
+}

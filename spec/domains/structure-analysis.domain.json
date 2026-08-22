@@ -1,0 +1,11 @@
+{
+  "name": "structure-analysis",
+  "description": "対象の構造把握。 バイナリを含む成果物の構成解析。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/structure/(?:.*/)?[^/]+$"
+    }
+  ]
+}

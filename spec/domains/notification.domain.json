@@ -1,0 +1,11 @@
+{
+  "name": "notification",
+  "description": "通知。 衝突と合意状況の周知。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/notify/(?:.*/)?[^/]+$"
+    }
+  ]
+}

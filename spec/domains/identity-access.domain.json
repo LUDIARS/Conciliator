@@ -1,0 +1,11 @@
+{
+  "name": "identity-access",
+  "description": "認証と権限。 Cernere を情報源とする本人性。",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [
+    {
+      "pathPattern": "(^|/)src/cernere/(?:.*/)?[^/]+$"
+    }
+  ]
+}
